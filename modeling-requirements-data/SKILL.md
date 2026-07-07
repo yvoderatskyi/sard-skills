@@ -1,6 +1,6 @@
 ---
 name: modeling-requirements-data
-description: Use when deriving, checking, or revising requirements data models, glossaries, data dictionaries, CRUD matrices, or class/state diagrams from use cases, functional requirements, workflow notes, or domain terms
+description: Use when modeling requirements data, glossaries, data dictionaries, CRUD matrices, entity traceability, or justified class/state diagrams
 ---
 
 # Modeling Requirements Data
@@ -57,7 +57,7 @@ Rules:
 - Link each entity to one or more UC steps using stable IDs such as `UC-001 step 3`.
 - If an entity cannot be linked to a UC step, mark it as `unsupported` and move it to unresolved questions unless another approved source explicitly justifies it.
 - If an attribute, relationship, state, or transition lacks support, remove it or move it to unresolved questions.
-- Do not add convenience entities for likely implementation needs without a requirement source.
+- Route convenience entities for likely implementation needs to unresolved questions unless they have a requirement source.
 
 ## CRUD Matrix by Actor/Use Case
 

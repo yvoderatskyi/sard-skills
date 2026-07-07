@@ -33,6 +33,8 @@ Each skill directory contains:
 - `SKILL.md`: the reusable skill instructions.
 - `pressure-scenarios.md`: RED-phase failure scenarios and verification targets used to harden the skill.
 
+`pressure-scenarios.md` files are maintenance tests, not runtime references. They document failure modes for editing and reviewing skills; normal skill execution uses `SKILL.md`.
+
 Planning docs are in `docs/plans/`.
 
 ## Example Usage

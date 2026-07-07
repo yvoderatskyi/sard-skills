@@ -1,6 +1,6 @@
 ---
 name: eliciting-business-requirements
-description: Use when clarifying a vague business idea, founder phrase, stakeholder request, interview input, limited-access business context, goals, risks, assumptions, or success criteria before writing requirements
+description: Use when clarifying vague business ideas, stakeholder requests, goals, risks, assumptions, or success criteria before requirements
 ---
 
 # Eliciting Business Requirements
@@ -60,7 +60,7 @@ Use `Answer or assumption` to distinguish confirmed stakeholder input from inven
 - Write requirements only after questions and the Q/A/conclusion table.
 - Do not draft requirements from vague input when material fields are missing unless the user explicitly authorizes provisional requirements.
 - Keep requirements at the business level: outcomes, policies, decisions, constraints, and user/business capabilities.
-- Do not invent goals. If a likely goal is useful, label it as an assumption and ask for confirmation.
+- Label likely goals as assumptions until confirmed.
 - Each requirement must link to a conclusion ID.
 - Each success criterion must be measurable with a metric, target, timeframe, and source or assumption.
 - Preserve uncertainty rather than smoothing it into confident language.

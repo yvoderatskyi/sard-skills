@@ -1,6 +1,6 @@
 ---
 name: modeling-use-cases
-description: Use when deriving, revising, checking, or diagramming actor-goal use cases from functional requirements, system context, workflow notes, stakeholder goals, or acceptance-analysis material
+description: Use when modeling actor-goal use cases, UC flows, FR coverage, gaps, or PlantUML use-case diagrams
 ---
 
 # Modeling Use Cases
@@ -29,8 +29,7 @@ Produce these sections in order:
 Rules:
 - Use stable UC IDs such as `UC-001`, `UC-002`, or established project prefixes.
 - Link every UC to one or more FR IDs. If no FR supports a needed UC, use `Missing - FR/context gap GAP-###` and list it in `FR/Context Gaps`.
-- Name each UC as an actor goal, such as `Request Return`, `Schedule Appointment`, or `Reset Password`.
-- Do not name UCs after UI elements, screens, clicks, APIs, jobs, tables, or internal components.
+- Name each UC as an actor goal, such as `Request Return`, `Schedule Appointment`, or `Reset Password`; put UI elements, screens, clicks, APIs, jobs, tables, and internal components in flows or gaps instead.
 - State one primary actor, trigger, preconditions, and postconditions for every UC.
 
 ## Use-Case Details

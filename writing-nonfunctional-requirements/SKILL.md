@@ -1,6 +1,6 @@
 ---
 name: writing-nonfunctional-requirements
-description: Use when writing, revising, or quality-checking nonfunctional requirements, quality attributes, constraints, measurable NFR thresholds, SLAs, SLOs, or system quality criteria
+description: Use when writing or checking measurable nonfunctional requirements, NFR thresholds, quality attributes, constraints, SLAs, or SLOs
 ---
 
 # Writing Nonfunctional Requirements
@@ -26,7 +26,7 @@ Group NFRs by quality category or by the project's existing structure.
 - State the operating context/environment where the threshold applies, including relevant users, load, device, network, deployment, region, vendor, regulatory boundary, or peak/normal condition.
 - Give every NFR a source link to a success criterion, constraint, risk, use-case context, business goal, stakeholder statement, or approved assumption ID/reference.
 - Define a verification method that can prove the threshold, such as load test, security test, penetration test, accessibility audit, failover drill, recovery exercise, monitoring review, log inspection, compliance audit, or contract test.
-- Do not invent generic NFRs. If a likely quality requirement lacks a source, list it as a provisional candidate with `Missing - open issue OI-###`.
+- Treat generic quality requirements without a source as provisional candidates with `Missing - open issue OI-###`.
 
 ## Measurability Check
 

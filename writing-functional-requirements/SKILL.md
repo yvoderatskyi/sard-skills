@@ -1,6 +1,6 @@
 ---
 name: writing-functional-requirements
-description: Use when writing, revising, grouping, prioritizing, or quality-checking functional requirements, FR lists, module requirements, process requirements, role requirements, or acceptance-ready requirement statements
+description: Use when writing or checking traceable functional requirements, FR lists, priorities, grouping, or acceptance-ready statements
 ---
 
 # Writing Functional Requirements
@@ -36,7 +36,7 @@ If source material contains nonfunctional requirements or quality attributes, pr
 - Set priority for every FR with a simple scheme such as `Must`, `Should`, `Could`, or the project's existing priority labels.
 - Write testable wording: one observable behavior per FR, clear trigger or condition, actor/system action, and expected result.
 - Keep FRs functional: describe what the system must do, validate, calculate, display, store, send, receive, restrict, or log.
-- Do not mix nonfunctional requirements into the FR table. Move any NFR-like source material to `NFR Candidates` by default so source context and routing information are preserved.
+- Keep NFR-like source material out of the FR table and preserve it in `NFR Candidates` by default so source context and routing information remain visible.
 - Preserve assumptions and uncertainty in Notes instead of rewriting them as confirmed requirements.
 
 ## Testability Check

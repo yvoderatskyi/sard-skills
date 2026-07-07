@@ -1,6 +1,6 @@
 ---
 name: modeling-system-context
-description: Use when defining a system boundary, classifying actors and external systems, mapping context-level data flows, or producing a DOT context diagram for requirements analysis
+description: Use when defining system context, boundaries, actors, external systems, context data flows, or DOT context diagrams
 ---
 
 # Modeling System Context
@@ -11,7 +11,7 @@ Use this skill to model what is inside the system under discussion and what inte
 
 - State the explicit system boundary before writing tables or diagrams.
 - Classify every named item as one of: actor, external system, internal component, inside-scope capability, out-of-scope item, or unresolved boundary item.
-- Do not treat internal components such as APIs, workers, databases, queues, schedulers, services, or modules as actors.
+- Classify APIs, workers, databases, queues, schedulers, services, and modules as internal components, not actors.
 - Include external systems named or implied by integrations, upstream data, downstream data, identity, payment, messaging, documents, analytics, compliance, storage, or support workflows.
 - Capture input and output data flow across the boundary.
 - Produce the context diagram in DOT.

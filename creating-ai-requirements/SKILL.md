@@ -1,13 +1,13 @@
 ---
 name: creating-ai-requirements
-description: Use when turning an unclear product idea, stakeholder phrase, or rough business problem into structured software requirements, AI-assisted SRS drafts, use cases, functional requirements, nonfunctional requirements, context diagrams, data models, or traceable analysis artifacts
+description: Use when turning vague product ideas or stakeholder requests into traceable requirements, SRS artifacts, or requirements-analysis workflows
 ---
 
 # Creating AI Requirements
 
 ## Overview
 
-Use AI as a systems-analysis partner, not an autonomous SRS writer. Convert a vague idea into requirements through chained artifacts, context preservation, traceability, and human review.
+Use AI as a systems-analysis partner, not an autonomous SRS writer. Convert a vague idea into requirements through chained artifacts, a trace chain, and human review.
 
 Based on the SARD-style article "How to write an AI technical specification from one customer phrase" at https://systems.education/ai-ts.
 
@@ -59,6 +59,8 @@ Maintain this ledger after every step and pass relevant rows forward:
 | `status` | proposed, approved, rejected, changed |
 | `risk` | ambiguity, contradiction, missing stakeholder confirmation |
 
+The trace chain is the linked path from source material to goal, FR, UC, entity, NFR, and SRS section. Keep it intact across every artifact.
+
 ## Prompt Pattern
 
 Use this structure for every artifact prompt:
@@ -69,7 +71,7 @@ Task: Produce only [artifact] for [system/module/role].
 Approved context: [ledger rows + previous approved artifact]
 Rules: use these IDs, output format, naming rules, priority scheme, and trace links.
 Uncertainty check: if required information is missing, either ask focused clarification questions or generate a clearly provisional artifact with unresolved questions when the active step allows that.
-Quality gate: verify completeness, consistency, testability, traceability.
+Quality gate: verify completeness, consistency, testability, and trace chain.
 Output: [exact table, Markdown, DOT, PlantUML, or SRS section only].
 ```
 
@@ -84,7 +86,7 @@ Step 1 output is not FRs. First produce interview questions and measurable succe
 | Check | Pass condition |
 | --- | --- |
 | Completeness | goals, actors, FR, UC, data, NFR, constraints, glossary |
-| Traceability | FR -> source; UC -> FR; entity -> UC; NFR -> success criterion, constraint, risk, goal, use-case context, stakeholder statement, or approved assumption |
+| Trace chain | FR -> source; UC -> FR; entity -> UC; NFR -> success criterion, constraint, risk, goal, use-case context, stakeholder statement, or approved assumption |
 | Testability | vague terms have measurable thresholds |
 | Consistency | names, IDs, actors, modules, entities match |
 | Feasibility | risks, dependencies, boundaries, open questions included |
