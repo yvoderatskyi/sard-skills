@@ -1,12 +1,12 @@
 # SRS Skills
 
-Codex skill suite for AI-assisted software requirements creation, based on the SRS-style workflow from "How to write an AI technical specification from one customer phrase": https://systems.education/ai-ts
+Codex skill suite for AI-assisted software requirements work, based on the workflow from "How to write an AI technical specification from one customer phrase": https://systems.education/ai-ts
 
-The suite treats AI as a systems-analysis partner, not an autonomous SRS writer. Requirements are created as chained artifacts with explicit context, traceability, uncertainty handling, and human review.
+The suite treats AI as a systems-analysis partner, not an autonomous SRS writer. It builds chained artifacts with explicit context, traceability, uncertainty handling, and human review.
 
 ## Workflow
 
-Use `srs-ai-creating-ai-requirements` as the entry point. It owns the context ledger and routes detailed artifact work to focused subskills.
+Start with `srs-ai-creating-ai-requirements`. It owns the context ledger and routes detailed artifact work to focused subskills.
 
 | Step | Artifact | Skill |
 | --- | --- | --- |
@@ -39,11 +39,11 @@ Planning docs are in `docs/plans/`.
 
 ## Example Usage
 
-The article's GPT invisibility example is documented in [docs/examples/article-workflow.md](docs/examples/article-workflow.md). Keep the README short and use that file for the full walk-through.
+Full walk-through: [docs/examples/article-workflow.md](docs/examples/article-workflow.md)
 
 ## Validation
 
-Run frontmatter validation for every skill:
+Run these checks after editing skills:
 
 ```bash
 for f in */SKILL.md; do
