@@ -6,6 +6,7 @@ description: Use when writing or checking traceable functional requirements, FR 
 # Writing Functional Requirements
 
 Use this skill to turn approved business context, system context, use-case notes, or stakeholder statements into traceable functional requirements. Keep requirements focused on observable system behavior.
+Keep the trace chain visible from source to FR to downstream use cases and data.
 
 ## Required Inputs
 

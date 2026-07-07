@@ -6,6 +6,7 @@ description: Use when modeling actor-goal use cases, UC flows, FR coverage, gaps
 # Modeling Use Cases
 
 Use this skill to model actor goals and system responsibilities as traceable use cases. Keep use cases at goal level; do not turn UI clicks, screens, or implementation steps into use cases.
+Keep the trace chain visible from FR to UC to flow and diagram.
 
 ## Required Inputs
 

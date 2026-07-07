@@ -6,6 +6,7 @@ description: Use when writing or checking measurable nonfunctional requirements,
 # Writing Nonfunctional Requirements
 
 Use this skill to turn approved goals, constraints, risks, operating context, and usage expectations into measurable nonfunctional requirements. Do not accept vague quality words as requirements.
+Keep the trace chain visible from goal, constraint, or risk to each NFR and verification method.
 
 ## Required Inputs
 

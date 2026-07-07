@@ -54,6 +54,7 @@ Use this table for answers and conclusions:
 | --- | --- | --- | --- | --- | --- |
 
 Use `Answer or assumption` to distinguish confirmed stakeholder input from invented details. Conclusions must trace to an answer, source note, or labeled assumption.
+Keep the trace chain visible from question to conclusion to requirement.
 
 ## Business Requirements Rules
 

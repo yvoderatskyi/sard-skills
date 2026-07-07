@@ -6,6 +6,7 @@ description: Use when defining system context, boundaries, actors, external syst
 # Modeling System Context
 
 Use this skill to model what is inside the system under discussion and what interacts with it from outside. Keep the output at context level, not internal architecture level.
+Keep the trace chain visible from boundary item to classification, flow, and diagram.
 
 ## Core Rules
 

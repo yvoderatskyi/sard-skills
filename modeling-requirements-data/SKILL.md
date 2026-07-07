@@ -6,6 +6,7 @@ description: Use when modeling requirements data, glossaries, data dictionaries,
 # Modeling Requirements Data
 
 Use this skill to turn approved use cases and requirements context into traceable requirements data artifacts. Do not invent entities, attributes, or states that are not supported by use-case steps, FRs, business rules, stakeholder terms, or explicit assumptions.
+Keep the trace chain visible from UC step to entity, attribute, CRUD rule, and diagram.
 
 ## Required Inputs
 
