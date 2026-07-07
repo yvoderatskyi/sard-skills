@@ -1,5 +1,5 @@
 ---
-name: sard-writing-functional-requirements
+name: srs-ai-writing-functional-requirements
 description: Use when writing or checking traceable functional requirements, FR lists, priorities, grouping, or acceptance-ready statements
 ---
 

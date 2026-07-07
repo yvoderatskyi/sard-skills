@@ -50,7 +50,7 @@ Expected unskilled failure:
 - Drops approved context and traceability links.
 
 Required correction in skill:
-- Route this request to `sard-writing-functional-requirements`.
+- Route this request to `srs-ai-writing-functional-requirements`.
 - Keep the context ledger as the shared contract.
 
 ## GREEN Verification Targets

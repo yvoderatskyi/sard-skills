@@ -1,22 +1,22 @@
-# SARD Skills
+# SRS Skills
 
-Codex skill suite for AI-assisted software requirements creation, based on the SARD-style workflow from "How to write an AI technical specification from one customer phrase": https://systems.education/ai-ts
+Codex skill suite for AI-assisted software requirements creation, based on the SRS-style workflow from "How to write an AI technical specification from one customer phrase": https://systems.education/ai-ts
 
 The suite treats AI as a systems-analysis partner, not an autonomous SRS writer. Requirements are created as chained artifacts with explicit context, traceability, uncertainty handling, and human review.
 
 ## Workflow
 
-Use `sard-creating-ai-requirements` as the entry point. It owns the context ledger and routes detailed artifact work to focused subskills.
+Use `srs-ai-creating-ai-requirements` as the entry point. It owns the context ledger and routes detailed artifact work to focused subskills.
 
 | Step | Artifact | Skill |
 | --- | --- | --- |
-| 1 | Business task, questions, success criteria | `sard-eliciting-business-requirements` |
-| 2 | System boundary, actors, external systems, context flows | `sard-modeling-system-context` |
-| 3 | Functional requirements | `sard-writing-functional-requirements` |
-| 4 | Use cases and use-case diagram | `sard-modeling-use-cases` |
-| 5 | Glossary, data dictionary, CRUD, class/state diagrams | `sard-modeling-requirements-data` |
-| 6 | Measurable nonfunctional requirements | `sard-writing-nonfunctional-requirements` |
-| 7 | SRS assembly and review | `sard-creating-ai-requirements` |
+| 1 | Business task, questions, success criteria | `srs-ai-eliciting-business-requirements` |
+| 2 | System boundary, actors, external systems, context flows | `srs-ai-modeling-system-context` |
+| 3 | Functional requirements | `srs-ai-writing-functional-requirements` |
+| 4 | Use cases and use-case diagram | `srs-ai-modeling-use-cases` |
+| 5 | Glossary, data dictionary, CRUD, class/state diagrams | `srs-ai-modeling-requirements-data` |
+| 6 | Measurable nonfunctional requirements | `srs-ai-writing-nonfunctional-requirements` |
+| 7 | SRS assembly and review | `srs-ai-creating-ai-requirements` |
 
 ## Core Rules
 
@@ -54,7 +54,7 @@ done
 Check orchestrator routing:
 
 ```bash
-rg -n "sard-eliciting-business-requirements|sard-modeling-system-context|sard-writing-functional-requirements|sard-modeling-use-cases|sard-modeling-requirements-data|sard-writing-nonfunctional-requirements" sard-creating-ai-requirements/SKILL.md
+rg -n "srs-ai-eliciting-business-requirements|srs-ai-modeling-system-context|srs-ai-writing-functional-requirements|srs-ai-modeling-use-cases|srs-ai-modeling-requirements-data|srs-ai-writing-nonfunctional-requirements" srs-ai-creating-ai-requirements/SKILL.md
 ```
 
 Check traceability language:

@@ -1,5 +1,5 @@
 ---
-name: sard-writing-nonfunctional-requirements
+name: srs-ai-writing-nonfunctional-requirements
 description: Use when writing or checking measurable nonfunctional requirements, NFR thresholds, quality attributes, constraints, SLAs, or SLOs
 ---
 

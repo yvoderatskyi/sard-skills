@@ -1,5 +1,5 @@
 ---
-name: sard-modeling-requirements-data
+name: srs-ai-modeling-requirements-data
 description: Use when modeling requirements data, glossaries, data dictionaries, CRUD matrices, entity traceability, or justified class/state diagrams
 ---
 

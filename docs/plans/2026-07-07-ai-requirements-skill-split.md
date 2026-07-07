@@ -4,7 +4,7 @@
 
 **Goal:** Split the AI requirements workflow into an orchestrator skill plus focused step skills for detailed artifact generation.
 
-**Architecture:** Keep `sard-creating-ai-requirements` as the entry point and routing layer. Add six subskills for detailed artifact work, each created with the `superpowers:writing-skills` RED-GREEN-REFACTOR process. Leave SRS assembly in the orchestrator until final SRS generation proves large enough to split.
+**Architecture:** Keep `srs-ai-creating-ai-requirements` as the entry point and routing layer. Add six subskills for detailed artifact work, each created with the `superpowers:writing-skills` RED-GREEN-REFACTOR process. Leave SRS assembly in the orchestrator until final SRS generation proves large enough to split.
 
 **Tech Stack:** Codex skills as Markdown (`SKILL.md`), pressure-scenario Markdown files, shell validation with `awk`, `python3`, `rg`, and `wc`.
 
@@ -15,8 +15,8 @@
 ### Task 1: Update Orchestrator Routing
 
 **Files:**
-- Modify: `sard-creating-ai-requirements/SKILL.md`
-- Modify: `sard-creating-ai-requirements/pressure-scenarios.md`
+- Modify: `srs-ai-creating-ai-requirements/SKILL.md`
+- Modify: `srs-ai-creating-ai-requirements/pressure-scenarios.md`
 
 **Step 1: Write the RED pressure scenario**
 
@@ -41,19 +41,19 @@ Required correction in skill:
 
 **Step 2: Update the orchestrator**
 
-Add a compact "Step Skill Routing" table to `sard-creating-ai-requirements/SKILL.md`:
+Add a compact "Step Skill Routing" table to `srs-ai-creating-ai-requirements/SKILL.md`:
 
 ```markdown
 ## Step Skill Routing
 
 | Need | Use |
 | --- | --- |
-| clarify business task, interview questions, goals | `sard-eliciting-business-requirements` |
-| system boundary, actors, external systems, context diagram | `sard-modeling-system-context` |
-| FR list, modules, priorities, acceptance-ready requirements | `sard-writing-functional-requirements` |
-| UC register, main/alternate/error flows, use-case diagram | `sard-modeling-use-cases` |
-| glossary, data dictionary, CRUD matrix, class/state diagrams | `sard-modeling-requirements-data` |
-| measurable quality attributes, constraints, NFR thresholds | `sard-writing-nonfunctional-requirements` |
+| clarify business task, interview questions, goals | `srs-ai-eliciting-business-requirements` |
+| system boundary, actors, external systems, context diagram | `srs-ai-modeling-system-context` |
+| FR list, modules, priorities, acceptance-ready requirements | `srs-ai-writing-functional-requirements` |
+| UC register, main/alternate/error flows, use-case diagram | `srs-ai-modeling-use-cases` |
+| glossary, data dictionary, CRUD matrix, class/state diagrams | `srs-ai-modeling-requirements-data` |
+| measurable quality attributes, constraints, NFR thresholds | `srs-ai-writing-nonfunctional-requirements` |
 ```
 
 **Step 3: Validate**
@@ -61,8 +61,8 @@ Add a compact "Step Skill Routing" table to `sard-creating-ai-requirements/SKILL
 Run:
 
 ```bash
-rg -n "Step Skill Routing|sard-eliciting-business-requirements|sard-writing-functional-requirements|context ledger" sard-creating-ai-requirements
-wc -w sard-creating-ai-requirements/SKILL.md
+rg -n "Step Skill Routing|srs-ai-eliciting-business-requirements|srs-ai-writing-functional-requirements|context ledger" srs-ai-creating-ai-requirements
+wc -w srs-ai-creating-ai-requirements/SKILL.md
 ```
 
 Expected: routing section and all six skill names found; word count remains reasonable.
@@ -71,17 +71,17 @@ Expected: routing section and all six skill names found; word count remains reas
 
 ```bash
 git status --short
-git add sard-creating-ai-requirements/SKILL.md sard-creating-ai-requirements/pressure-scenarios.md
+git add srs-ai-creating-ai-requirements/SKILL.md srs-ai-creating-ai-requirements/pressure-scenarios.md
 git commit -m "docs: route ai requirements step skills"
 ```
 
 Skip if `git status` reports this is not a repository.
 
-### Task 2: Create `sard-eliciting-business-requirements`
+### Task 2: Create `srs-ai-eliciting-business-requirements`
 
 **Files:**
-- Create: `sard-eliciting-business-requirements/SKILL.md`
-- Create: `sard-eliciting-business-requirements/pressure-scenarios.md`
+- Create: `srs-ai-eliciting-business-requirements/SKILL.md`
+- Create: `srs-ai-eliciting-business-requirements/pressure-scenarios.md`
 
 **Step 1: Use required skill**
 
@@ -109,17 +109,17 @@ The skill must require:
 Run:
 
 ```bash
-awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' sard-eliciting-business-requirements/SKILL.md
-rg -n "questions|success criteria|assumptions|stakeholder|uncertainty" sard-eliciting-business-requirements
+awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' srs-ai-eliciting-business-requirements/SKILL.md
+rg -n "questions|success criteria|assumptions|stakeholder|uncertainty" srs-ai-eliciting-business-requirements
 ```
 
 Expected: frontmatter passes; required terms are present.
 
-### Task 3: Create `sard-modeling-system-context`
+### Task 3: Create `srs-ai-modeling-system-context`
 
 **Files:**
-- Create: `sard-modeling-system-context/SKILL.md`
-- Create: `sard-modeling-system-context/pressure-scenarios.md`
+- Create: `srs-ai-modeling-system-context/SKILL.md`
+- Create: `srs-ai-modeling-system-context/pressure-scenarios.md`
 
 **Step 1: Write RED scenarios**
 
@@ -144,17 +144,17 @@ The skill must require:
 Run:
 
 ```bash
-awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' sard-modeling-system-context/SKILL.md
-rg -n "boundary|actor|external system|data flow|DOT" sard-modeling-system-context
+awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' srs-ai-modeling-system-context/SKILL.md
+rg -n "boundary|actor|external system|data flow|DOT" srs-ai-modeling-system-context
 ```
 
 Expected: frontmatter passes; boundary and diagram rules are present.
 
-### Task 4: Create `sard-writing-functional-requirements`
+### Task 4: Create `srs-ai-writing-functional-requirements`
 
 **Files:**
-- Create: `sard-writing-functional-requirements/SKILL.md`
-- Create: `sard-writing-functional-requirements/pressure-scenarios.md`
+- Create: `srs-ai-writing-functional-requirements/SKILL.md`
+- Create: `srs-ai-writing-functional-requirements/pressure-scenarios.md`
 
 **Step 1: Write RED scenarios**
 
@@ -180,17 +180,17 @@ The skill must require:
 Run:
 
 ```bash
-awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' sard-writing-functional-requirements/SKILL.md
-rg -n "FR|source|priority|testable|nonfunctional|NFR" sard-writing-functional-requirements
+awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' srs-ai-writing-functional-requirements/SKILL.md
+rg -n "FR|source|priority|testable|nonfunctional|NFR" srs-ai-writing-functional-requirements
 ```
 
 Expected: frontmatter passes; FR quality gates are present.
 
-### Task 5: Create `sard-modeling-use-cases`
+### Task 5: Create `srs-ai-modeling-use-cases`
 
 **Files:**
-- Create: `sard-modeling-use-cases/SKILL.md`
-- Create: `sard-modeling-use-cases/pressure-scenarios.md`
+- Create: `srs-ai-modeling-use-cases/SKILL.md`
+- Create: `srs-ai-modeling-use-cases/pressure-scenarios.md`
 
 **Step 1: Write RED scenarios**
 
@@ -215,17 +215,17 @@ The skill must require:
 Run:
 
 ```bash
-awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' sard-modeling-use-cases/SKILL.md
-rg -n "UC|FR|alternate|error flow|PlantUML|precondition|postcondition" sard-modeling-use-cases
+awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' srs-ai-modeling-use-cases/SKILL.md
+rg -n "UC|FR|alternate|error flow|PlantUML|precondition|postcondition" srs-ai-modeling-use-cases
 ```
 
 Expected: frontmatter passes; use-case structure is present.
 
-### Task 6: Create `sard-modeling-requirements-data`
+### Task 6: Create `srs-ai-modeling-requirements-data`
 
 **Files:**
-- Create: `sard-modeling-requirements-data/SKILL.md`
-- Create: `sard-modeling-requirements-data/pressure-scenarios.md`
+- Create: `srs-ai-modeling-requirements-data/SKILL.md`
+- Create: `srs-ai-modeling-requirements-data/pressure-scenarios.md`
 
 **Step 1: Write RED scenarios**
 
@@ -250,17 +250,17 @@ The skill must require:
 Run:
 
 ```bash
-awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' sard-modeling-requirements-data/SKILL.md
-rg -n "glossary|data dictionary|CRUD|entity|UC|state diagram|class diagram" sard-modeling-requirements-data
+awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' srs-ai-modeling-requirements-data/SKILL.md
+rg -n "glossary|data dictionary|CRUD|entity|UC|state diagram|class diagram" srs-ai-modeling-requirements-data
 ```
 
 Expected: frontmatter passes; data model gates are present.
 
-### Task 7: Create `sard-writing-nonfunctional-requirements`
+### Task 7: Create `srs-ai-writing-nonfunctional-requirements`
 
 **Files:**
-- Create: `sard-writing-nonfunctional-requirements/SKILL.md`
-- Create: `sard-writing-nonfunctional-requirements/pressure-scenarios.md`
+- Create: `srs-ai-writing-nonfunctional-requirements/SKILL.md`
+- Create: `srs-ai-writing-nonfunctional-requirements/pressure-scenarios.md`
 
 **Step 1: Write RED scenarios**
 
@@ -286,8 +286,8 @@ The skill must require:
 Run:
 
 ```bash
-awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' sard-writing-nonfunctional-requirements/SKILL.md
-rg -n "NFR|threshold|metric|environment|verification|constraint|risk" sard-writing-nonfunctional-requirements
+awk 'NR==1&&$0!="---"{bad=1} NR==2&&$0!~/^name: [A-Za-z0-9-]+$/{bad=1} NR==3&&$0!~/^description: Use when /{bad=1} NR==4&&$0!="---"{bad=1} END{exit bad}' srs-ai-writing-nonfunctional-requirements/SKILL.md
+rg -n "NFR|threshold|metric|environment|verification|constraint|risk" srs-ai-writing-nonfunctional-requirements
 ```
 
 Expected: frontmatter passes; measurable NFR gates are present.
@@ -315,7 +315,7 @@ Expected: command exits 0.
 Run:
 
 ```bash
-rg -n "sard-eliciting-business-requirements|sard-modeling-system-context|sard-writing-functional-requirements|sard-modeling-use-cases|sard-modeling-requirements-data|sard-writing-nonfunctional-requirements" sard-creating-ai-requirements/SKILL.md
+rg -n "srs-ai-eliciting-business-requirements|srs-ai-modeling-system-context|srs-ai-writing-functional-requirements|srs-ai-modeling-use-cases|srs-ai-modeling-requirements-data|srs-ai-writing-nonfunctional-requirements" srs-ai-creating-ai-requirements/SKILL.md
 ```
 
 Expected: all six subskills are listed.
@@ -334,7 +334,7 @@ Expected: each skill contains relevant traceability or uncertainty language.
 
 ```bash
 git status --short
-git add sard-creating-ai-requirements sard-eliciting-business-requirements sard-modeling-system-context sard-writing-functional-requirements sard-modeling-use-cases sard-modeling-requirements-data sard-writing-nonfunctional-requirements docs/plans
+git add srs-ai-creating-ai-requirements srs-ai-eliciting-business-requirements srs-ai-modeling-system-context srs-ai-writing-functional-requirements srs-ai-modeling-use-cases srs-ai-modeling-requirements-data srs-ai-writing-nonfunctional-requirements docs/plans
 git commit -m "docs: split ai requirements workflow skills"
 ```
 

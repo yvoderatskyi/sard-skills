@@ -1,5 +1,5 @@
 ---
-name: sard-creating-ai-requirements
+name: srs-ai-creating-ai-requirements
 description: Use when turning vague product ideas or stakeholder requests into traceable requirements, SRS artifacts, or requirements-analysis workflows
 ---
 
@@ -9,7 +9,7 @@ description: Use when turning vague product ideas or stakeholder requests into t
 
 Use AI as a systems-analysis partner, not an autonomous SRS writer. Convert a vague idea into requirements through chained artifacts, a trace chain, and human review.
 
-Based on the SARD-style article "How to write an AI technical specification from one customer phrase" at https://systems.education/ai-ts.
+Based on the SRS-style article "How to write an AI technical specification from one customer phrase" at https://systems.education/ai-ts.
 
 ## When to Use
 
@@ -40,12 +40,12 @@ The orchestrator keeps ownership of the context ledger and routes detailed artif
 
 | Need | Use |
 | --- | --- |
-| clarify business task, interview questions, goals | `sard-eliciting-business-requirements` |
-| system boundary, actors, external systems, context diagram | `sard-modeling-system-context` |
-| FR list, modules, priorities, acceptance-ready requirements | `sard-writing-functional-requirements` |
-| UC register, main/alternate/error flows, use-case diagram | `sard-modeling-use-cases` |
-| glossary, data dictionary, CRUD matrix, class/state diagrams | `sard-modeling-requirements-data` |
-| measurable quality attributes, constraints, NFR thresholds | `sard-writing-nonfunctional-requirements` |
+| clarify business task, interview questions, goals | `srs-ai-eliciting-business-requirements` |
+| system boundary, actors, external systems, context diagram | `srs-ai-modeling-system-context` |
+| FR list, modules, priorities, acceptance-ready requirements | `srs-ai-writing-functional-requirements` |
+| UC register, main/alternate/error flows, use-case diagram | `srs-ai-modeling-use-cases` |
+| glossary, data dictionary, CRUD matrix, class/state diagrams | `srs-ai-modeling-requirements-data` |
+| measurable quality attributes, constraints, NFR thresholds | `srs-ai-writing-nonfunctional-requirements` |
 
 ## Required Context Ledger
 
