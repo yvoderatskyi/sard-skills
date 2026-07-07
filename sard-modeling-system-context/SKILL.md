@@ -1,5 +1,5 @@
 ---
-name: modeling-system-context
+name: sard-modeling-system-context
 description: Use when defining system context, boundaries, actors, external systems, context data flows, or DOT context diagrams
 ---
 

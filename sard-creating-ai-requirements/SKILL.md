@@ -1,5 +1,5 @@
 ---
-name: creating-ai-requirements
+name: sard-creating-ai-requirements
 description: Use when turning vague product ideas or stakeholder requests into traceable requirements, SRS artifacts, or requirements-analysis workflows
 ---
 
@@ -40,12 +40,12 @@ The orchestrator keeps ownership of the context ledger and routes detailed artif
 
 | Need | Use |
 | --- | --- |
-| clarify business task, interview questions, goals | `eliciting-business-requirements` |
-| system boundary, actors, external systems, context diagram | `modeling-system-context` |
-| FR list, modules, priorities, acceptance-ready requirements | `writing-functional-requirements` |
-| UC register, main/alternate/error flows, use-case diagram | `modeling-use-cases` |
-| glossary, data dictionary, CRUD matrix, class/state diagrams | `modeling-requirements-data` |
-| measurable quality attributes, constraints, NFR thresholds | `writing-nonfunctional-requirements` |
+| clarify business task, interview questions, goals | `sard-eliciting-business-requirements` |
+| system boundary, actors, external systems, context diagram | `sard-modeling-system-context` |
+| FR list, modules, priorities, acceptance-ready requirements | `sard-writing-functional-requirements` |
+| UC register, main/alternate/error flows, use-case diagram | `sard-modeling-use-cases` |
+| glossary, data dictionary, CRUD matrix, class/state diagrams | `sard-modeling-requirements-data` |
+| measurable quality attributes, constraints, NFR thresholds | `sard-writing-nonfunctional-requirements` |
 
 ## Required Context Ledger
 

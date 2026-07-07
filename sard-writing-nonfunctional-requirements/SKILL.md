@@ -1,5 +1,5 @@
 ---
-name: writing-nonfunctional-requirements
+name: sard-writing-nonfunctional-requirements
 description: Use when writing or checking measurable nonfunctional requirements, NFR thresholds, quality attributes, constraints, SLAs, or SLOs
 ---
 

@@ -11,7 +11,7 @@ Use the skills as an artifact chain, not as one large SRS prompt.
 ## 1. Start the Workflow
 
 ```text
-Use creating-ai-requirements.
+Use sard-creating-ai-requirements.
 
 Initial customer phrase:
 "Help me make GPT so invisible that people stop fearing the singularity."
@@ -22,7 +22,7 @@ Do not generate an SRS yet. Create the context ledger and route me to the first 
 ## 2. Elicit Business Requirements
 
 ```text
-Use eliciting-business-requirements.
+Use sard-eliciting-business-requirements.
 
 Business idea:
 "Help me make GPT so invisible that people stop fearing the singularity."
@@ -36,7 +36,7 @@ Expected focus: goals, fear drivers, target users, acceptable autonomy, transpar
 ## 3. Model System Context
 
 ```text
-Use modeling-system-context.
+Use sard-modeling-system-context.
 
 Approved context:
 - Goal: AI assistance should feel predictable and non-intrusive.
@@ -50,7 +50,7 @@ Produce actors, external systems, data flows, unresolved boundary questions, and
 ## 4. Write Functional Requirements
 
 ```text
-Use writing-functional-requirements.
+Use sard-writing-functional-requirements.
 
 Input:
 - Context model for Invisible AI
@@ -71,7 +71,7 @@ FR-001 | The system shall detect when the user is asking for background assistan
 ## 5. Model Use Cases
 
 ```text
-Use modeling-use-cases.
+Use sard-modeling-use-cases.
 
 Input FRs:
 FR-001 ambient assistance
@@ -86,7 +86,7 @@ Example use-case candidates from the article's scenario include naming the AI fo
 ## 6. Model Requirements Data
 
 ```text
-Use modeling-requirements-data.
+Use sard-modeling-requirements-data.
 
 Input:
 - UC register and UC flows for Invisible AI
@@ -101,7 +101,7 @@ Possible entities might include `UserPreference`, `AutonomousAction`, `Explanati
 ## 7. Write Nonfunctional Requirements
 
 ```text
-Use writing-nonfunctional-requirements.
+Use sard-writing-nonfunctional-requirements.
 
 Input:
 - Success criteria
@@ -121,7 +121,7 @@ NFR-001 | Usability | 90% of first-time users shall understand why an autonomous
 ## 8. Assemble and Review
 
 ```text
-Use creating-ai-requirements.
+Use sard-creating-ai-requirements.
 
 Assemble the approved artifacts into an SRS outline.
 Then review for completeness, consistency, testability, traceability, and feasibility.

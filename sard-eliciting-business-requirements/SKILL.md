@@ -1,5 +1,5 @@
 ---
-name: eliciting-business-requirements
+name: sard-eliciting-business-requirements
 description: Use when clarifying vague business ideas, stakeholder requests, goals, risks, assumptions, or success criteria before requirements
 ---
 

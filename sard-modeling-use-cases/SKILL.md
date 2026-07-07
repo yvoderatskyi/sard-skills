@@ -1,5 +1,5 @@
 ---
-name: modeling-use-cases
+name: sard-modeling-use-cases
 description: Use when modeling actor-goal use cases, UC flows, FR coverage, gaps, or PlantUML use-case diagrams
 ---
 

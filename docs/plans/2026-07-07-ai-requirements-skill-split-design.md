@@ -2,15 +2,15 @@
 
 ## Context
 
-The current `creating-ai-requirements` skill summarizes a SARD-style AI-assisted requirements workflow from a vague stakeholder idea to an SRS. The workflow has seven artifact steps: business task, project context, functional requirements, use cases, data model, nonfunctional requirements, and SRS assembly.
+The current `sard-creating-ai-requirements` skill summarizes a SARD-style AI-assisted requirements workflow from a vague stakeholder idea to an SRS. The workflow has seven artifact steps: business task, project context, functional requirements, use cases, data model, nonfunctional requirements, and SRS assembly.
 
 ## Decision
 
-Use a hybrid split. Keep `creating-ai-requirements` as the orchestration skill and create detailed subskills only for execution-heavy steps.
+Use a hybrid split. Keep `sard-creating-ai-requirements` as the orchestration skill and create detailed subskills only for execution-heavy steps.
 
 ## Architecture
 
-`creating-ai-requirements` remains the entry point. It should:
+`sard-creating-ai-requirements` remains the entry point. It should:
 
 - detect where the user is in the requirements lifecycle;
 - enforce "no one-pass SRS";
@@ -20,12 +20,12 @@ Use a hybrid split. Keep `creating-ai-requirements` as the orchestration skill a
 
 Step skills should each cover one artifact family:
 
-- `eliciting-business-requirements`
-- `modeling-system-context`
-- `writing-functional-requirements`
-- `modeling-use-cases`
-- `modeling-requirements-data`
-- `writing-nonfunctional-requirements`
+- `sard-eliciting-business-requirements`
+- `sard-modeling-system-context`
+- `sard-writing-functional-requirements`
+- `sard-modeling-use-cases`
+- `sard-modeling-requirements-data`
+- `sard-writing-nonfunctional-requirements`
 
 `assembling-srs` should stay in the orchestrator for now. Split it later only if final SRS generation becomes frequent or too detailed for the orchestration skill.
 
